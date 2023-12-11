@@ -81,14 +81,15 @@ def read_files():
         contacts_list = file.read().rstrip().split("\n\n") 
     return contacts_list       
 
-def print_contacts(contacts_list):
+def print_contacts():
     """List all entries"""
-    # with open('phonebook.txt', 'r', encoding='utf-8') as file:
-    #     print('-----------------------')
-    #     print(file.read())
-    #     print('-----------------------')
+    with open('phonebook.txt', 'r', encoding='utf-8') as file:
+        print('-----------------------')
+        print(file.read())
+        print('-----------------------')
 
     # 2
+def print_contacts2(contacts_list):   
     # with open("phonebook.txt", "r", encoding="utf-8") as file:
         # contacts_list = file.read().rstrip().split("\n\n")
     for nn, contact in enumerate(contacts_list, 1):
@@ -96,7 +97,7 @@ def print_contacts(contacts_list):
 
 def copy_contact():
     contacts_list = read_files()
-    print_contacts(contacts_list) 
+    print_contacts2(contacts_list) 
     num_contact = int(input("Введите номер контакта для копирования: "))
     with open("copybook.txt", "a", encoding="utf-8") as file:
         file.write(contacts_list[num_contact - 1])
