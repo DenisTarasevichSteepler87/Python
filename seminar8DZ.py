@@ -88,7 +88,7 @@ def print_contacts():
         print(file.read())
         print('-----------------------')
 
-    # 2
+    
 def print_contacts2(contacts_list):   
     # with open("phonebook.txt", "r", encoding="utf-8") as file:
         # contacts_list = file.read().rstrip().split("\n\n")
